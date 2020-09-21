@@ -4,8 +4,8 @@ var bg2_x = 436;
 var menu_setup = 1;
 //Animation Variables
 var logo_y = -100;
-var girls_y = 60;
-var girls2_y = 130;
+var girls_y = 600;
+var girls2_y = 600;
 var sidebar_x = -500;
 var x;
 var yt;
@@ -79,9 +79,9 @@ function drawSplash(){
 function drawBar(){
 	drawImg("background",bg_x,0);
 	drawImg("background",bg2_x,0);
-	bg_x -= 0.2;
-	bg2_x -= 0.2;
-	bg_y -= 0.2;
+	bg_x -= 0.1;
+	bg2_x -= 0.1;
+	bg_y -= 0.1;
 	if(bg_x+436 <= 0){
 		bg_x = 436;
 	}
@@ -99,9 +99,9 @@ function drawBar(){
 function drawLogo(){
 	drawImg("background",bg_x,0);
 	drawImg("background",bg2_x,0);
-	bg_x -= 0.2;
-	bg2_x -= 0.2;
-	bg_y -= 0.2;
+	bg_x -= 0.1;
+	bg2_x -= 0.1;
+	bg_y -= 0.1;
 	if(bg_x+436 <= 0){
 		bg_x = 436;
 	}
@@ -120,9 +120,9 @@ function drawLogo(){
 function drawGirls(){
 	drawImg("background",bg_x,0);
 	drawImg("background",bg2_x,0);
-	bg_x -= 0.2;
-	bg2_x -= 0.2;
-	bg_y -= 0.2;
+	bg_x -= 0.1;
+	bg2_x -= 0.1;
+	bg_y -= 0.1;
 	if(bg_x+436 <= 0){
 		bg_x = 436;
 	}
@@ -148,9 +148,9 @@ function drawMenu(){
 if(menu_setup == 1){
 	drawImg("background",bg_x,0);
 	drawImg("background",bg2_x,0);
-	bg_x -= 0.2;
-	bg2_x -= 0.2;
-	bg_y -= 0.2;
+	bg_x -= 0.1;
+	bg2_x -= 0.1;
+	bg_y -= 0.1;
 	if(bg_x+436 <= 0){
 		bg_x = 436;
 	}
@@ -165,13 +165,13 @@ if(menu_setup == 1){
 	drawImg("play",20,150);
 	drawImg("settings",20,220);
 	drawImg("logo",80,-5);
-	drawImg("menu_art_y",200,60);
-	drawImg("menu_art_s",180,130);
-	drawImg("menu_art_n",285,60);
-	drawImg("menu_art_m",340,140);
-	bg_x -= 0.2;
-	bg2_x -= 0.2;
-	bg_y -= 0.2;
+	drawImg("menu_art_y",200,girls_y);
+	drawImg("menu_art_s",180,girls2_y);
+	drawImg("menu_art_n",285,girls_y);
+	drawImg("menu_art_m",340,girls2_y);
+	bg_x -= 0.1;
+	bg2_x -= 0.1;
+	bg_y -= 0.1;
 	if(bg_x+436 <= 0){
 		bg_x = 436;
 	}
@@ -179,7 +179,7 @@ if(menu_setup == 1){
 		bg2_x = 436;
 	}
 	if(next == 1){
-		clearInterval(yt);
+		clearInterval(x);
 		x = setInterval(drawScene1,1);
 	}
 }
