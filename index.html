@@ -1,0 +1,88 @@
+<html>
+<head>
+<title>My Projects</title>
+<style>
+body{
+	background-color: #000000;
+	height: 100%;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+canvas{
+	border-style: solid;
+	border-width: 5px;
+}
+.center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.ddlcbutton {
+  margin: 0;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+button {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #ff99cc;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+.fullscreen {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, 450%);
+  transform: translate(-50%, 450%);
+}
+
+button:hover {background-color: #ff3399}
+</style>
+<canvas class="center" id="mycanvas" width="500" height="400" align="left" style="display: none"></canvas>
+<img src="images/bg/splash_jscript.png" id="splash" width="500" height="400" style="display:none"></img>
+<img src="images/bg/warning.png" id="warning" width="500" height="400" style="display:none"></img>
+<img src="images/bg/residential.png" id="residential" width="500" height="400" style="display:none"></img>
+<img src="gui/logo.png" id="logo" width="500" height="400" style="display:none"></img>
+<img src="gui/settings.png" id="settings" width="500" height="400" style="display:none"></img>
+<img src="gui/play.png" id="play" width="500" height="400" style="display:none"></img>
+<img src="gui/overlay/main_menu.png" id="main_menu" width="500" height="400" style="display:none"></img>
+<img src="gui/menu_art_y.png" id="menu_art_y" width="500" height="400" style="display:none"></img>
+<img src="gui/menu_art_s.png" id="menu_art_s" width="500" height="400" style="display:none"></img>
+<img src="gui/menu_art_n.png" id="menu_art_n" width="500" height="400" style="display:none"></img>
+<img src="gui/menu_art_m.png" id="menu_art_m" width="500" height="400" style="display:none"></img>
+<img src="gui/menu_bg.png" id="background" width="500" height="400" style="display:none"></img>
+<img src="gui/textbox.png" id="textbox" width="500" height="400" style="display:none"></img>
+<img src="gui/namebox.png" id="namebox" width="500" height="400" style="display:none"></img>
+<!-- Sayori Textures -->
+<img src="images/sayori/1r.png" id="sayori_1r" width="500" height="400" style="display:none"></img>
+<img src="images/sayori/1l.png" id="sayori_1l" width="500" height="400" style="display:none"></img>
+<img src="images/sayori/a.png" id="sayori_a" width="500" height="400" style="display:none"></img>
+<audio id="1" muted loop src="bgm/1.ogg" style="visibility: hidden"></audio>
+<audio id="2" muted loop src="bgm/2.ogg" style="visibility: hidden"></audio>
+<audio id="select" muted src="gui/sfx/select.ogg" style="visibility: hidden"></audio>
+<script src="src/atomic.lib.js"></script>
+<script src="main.js"></script>
+
+
+
+</head>
+<body>
+<button class="ddlcbutton" type="button" id="ddlc_start" onclick="ddlc_start()">Start DDLC</button>
+<button class="fullscreen" type="button" id="fullscreen" onclick=canvas.webkitRequestFullscreen(); style="display: none">Fullscreen</button>
+</body>
+</html>
