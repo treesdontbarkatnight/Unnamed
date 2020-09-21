@@ -71,12 +71,23 @@ function drawSplash(){
 			clearInterval(x);
 			brightness = 100;
 			x = setInterval(drawBar,1);
-			yt = setInterval(drawMenu,50);
+			//yt = setInterval(drawMenu,50);
 		}
 	}
 }
 
 function drawBar(){
+	drawImg("background",bg_x,0);
+	drawImg("background",bg2_x,0);
+	bg_x -= 0.2;
+	bg2_x -= 0.2;
+	bg_y -= 0.2;
+	if(bg_x+436 <= 0){
+		bg_x = 436;
+	}
+	if(bg2_x+436 <= 0){
+		bg2_x = 436;
+	}
 	drawImg("main_menu",sidebar_x,0);
 	sidebar_x += 1;
 	if(sidebar_x >= 0){
@@ -86,6 +97,17 @@ function drawBar(){
 }
 
 function drawLogo(){
+	drawImg("background",bg_x,0);
+	drawImg("background",bg2_x,0);
+	bg_x -= 0.2;
+	bg2_x -= 0.2;
+	bg_y -= 0.2;
+	if(bg_x+436 <= 0){
+		bg_x = 436;
+	}
+	if(bg2_x+436 <= 0){
+		bg2_x = 436;
+	}
 	drawImg("main_menu",sidebar_x,0);
 	drawImg("logo",80,logo_y);
 	logo_y += 1;
@@ -96,6 +118,17 @@ function drawLogo(){
 }
 
 function drawGirls(){
+	drawImg("background",bg_x,0);
+	drawImg("background",bg2_x,0);
+	bg_x -= 0.2;
+	bg2_x -= 0.2;
+	bg_y -= 0.2;
+	if(bg_x+436 <= 0){
+		bg_x = 436;
+	}
+	if(bg2_x+436 <= 0){
+		bg2_x = 436;
+	}
 	drawImg("menu_art_y",200,girls_y);
 	drawImg("menu_art_s",180,girls2_y);
 	drawImg("menu_art_n",285,girls_y);
@@ -107,6 +140,7 @@ function drawGirls(){
 	if(girls_y <= 60 && girls2_y <= 130){
 		menu_setup = 0;
 		clearInterval(x);
+		x = setInterval(drawMenu,1);
 	}
 }
 
@@ -114,9 +148,9 @@ function drawMenu(){
 if(menu_setup == 1){
 	drawImg("background",bg_x,0);
 	drawImg("background",bg2_x,0);
-	bg_x -= 1;
-	bg2_x -= 1;
-	bg_y -= 1;
+	bg_x -= 0.2;
+	bg2_x -= 0.2;
+	bg_y -= 0.2;
 	if(bg_x+436 <= 0){
 		bg_x = 436;
 	}
@@ -135,9 +169,9 @@ if(menu_setup == 1){
 	drawImg("menu_art_s",180,130);
 	drawImg("menu_art_n",285,60);
 	drawImg("menu_art_m",340,140);
-	bg_x -= 1;
-	bg2_x -= 1;
-	bg_y -= 1;
+	bg_x -= 0.2;
+	bg2_x -= 0.2;
+	bg_y -= 0.2;
 	if(bg_x+436 <= 0){
 		bg_x = 436;
 	}
