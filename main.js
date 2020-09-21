@@ -17,6 +17,7 @@ var next = 0;
 var charName = "Yeet";
 var scripts = ["HeLlO hoW ArE Yu","Sayori?...","Hello " + charName + ".","Sayori what are you doing here?","I thought we would walk to school together!"];
 var charSpeaking = ["Monika?",charName,"Sayori",charName,"Sayori"];
+var black_x = 600;
 
 function ddlc_start(){
 	//canvas.addEventListener("mousemove", getMousePos,false);
@@ -146,17 +147,7 @@ function drawGirls(){
 
 function drawMenu(){
 if(menu_setup == 1){
-	drawImg("background",bg_x,0);
-	drawImg("background",bg2_x,0);
-	bg_x -= 0.1;
-	bg2_x -= 0.1;
-	bg_y -= 0.1;
-	if(bg_x+436 <= 0){
-		bg_x = 436;
-	}
-	if(bg2_x+436 <= 0){
-		bg2_x = 436;
-	}
+	
 }else{
 	document.addEventListener('keydown', keyPressed, false);
 	drawImg("background",bg_x,0);
@@ -179,8 +170,19 @@ if(menu_setup == 1){
 		bg2_x = 436;
 	}
 	if(next == 1){
-		clearInterval(x);
-		x = setInterval(drawScene1,1);
+		black_x -= 2;
+		drawRect(black_x,0,500,400,"#000000");
+		if(black_x == 0 || black_x < 0){
+			menu_option = 0;
+			audio("1","stop");
+			audio("2","play");
+			drawImg("residential",0,0);
+			drawRect(black_x,0,500,400,"#000000");
+		}
+		if(black_x < -600){
+			clearInterval(x);
+			x = setInterval(drawScene1,1);
+		}
 	}
 }
 }
