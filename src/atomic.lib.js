@@ -2,7 +2,7 @@ var canvas = document.getElementById("mycanvas");
 var ctx = canvas.getContext('2d');
 var red = "#FF0000";
 
-function rect(x,y,w,h,c){
+function drawRect(x,y,w,h,c){
   	if (canvas.getContext) {
 		ctx.fillStyle = c;
 		ctx.fillRect(x, y, w, h);
