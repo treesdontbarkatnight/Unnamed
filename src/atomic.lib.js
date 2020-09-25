@@ -18,10 +18,8 @@ function background(c){
 	}
 }
 
-function drawImg(id,x,y){
+function drawImg(id,x,y,alpha){
 	var img = document.getElementById(id);
-	ctx.filter = 'brightness(' + brightness + '%)';
-	ctx.shadowBlur = 0;
 	ctx.drawImage(img, x, y);
 }
 

@@ -9,8 +9,7 @@ body{
 	background-size: cover;
 }
 canvas{
-	border-style: solid;
-	border-width: 5px;
+	box-shadow: 0px 0px 10px 10px rgba(255, 255, 255, 400);
 }
 .center {
   margin: 0;
@@ -47,13 +46,19 @@ button {
   position: absolute;
   top: 50%;
   left: 50%;
-  -ms-transform: translate(-50%, 450%);
-  transform: translate(-50%, 450%);
+  -ms-transform: translate(-50%, 680%);
+  transform: translate(-50%, 680%);
+  color: #ffffff;
+  text-shadow: 2px 2px 4px #ffffff;
 }
 
 button:hover {background-color: #ff3399}
 </style>
 <canvas class="center" id="mycanvas" width="500" height="400" align="left" style="display: none"></canvas>
+<img src="images/bg/noise1.jpg" id="noise1" width="500" height="400" style="display:none"></img>
+<img src="images/bg/noise2.jpg" id="noise2" width="500" height="400" style="display:none"></img>
+<img src="images/bg/noise3.jpg" id="noise3" width="500" height="400" style="display:none"></img>
+<img src="images/bg/noise4.jpg" id="noise4" width="500" height="400" style="display:none"></img>
 <img src="images/bg/splash_jscript.png" id="splash" width="500" height="400" style="display:none"></img>
 <img src="images/bg/warning.png" id="warning" width="500" height="400" style="display:none"></img>
 <img src="images/bg/residential.png" id="residential" width="500" height="400" style="display:none"></img>
@@ -74,6 +79,7 @@ button:hover {background-color: #ff3399}
 <img src="images/sayori/a.png" id="sayori_a" width="500" height="400" style="display:none"></img>
 <audio id="1" muted loop src="bgm/1.ogg" style="visibility: hidden"></audio>
 <audio id="2" muted loop src="bgm/2.ogg" style="visibility: hidden"></audio>
+<audio id="sayonara" muted loop src="bgm/sayonara.mp3" style="visibility: hidden"></audio>
 <audio id="select" muted src="gui/sfx/select.ogg" style="visibility: hidden"></audio>
 <script src="src/atomic.lib.js"></script>
 <script src="main.js"></script>
@@ -83,6 +89,6 @@ button:hover {background-color: #ff3399}
 </head>
 <body>
 <button class="ddlcbutton" type="button" id="ddlc_start" onclick="ddlc_start()">Start DDLC</button>
-<button class="fullscreen" type="button" id="fullscreen" onclick=canvas.webkitRequestFullscreen(); style="display: none">Fullscreen</button>
+<h1 id="fullscreen" class="fullscreen" style="color: white; display: none">Coming Soon...</h1>
 </body>
 </html>
