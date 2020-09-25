@@ -26,7 +26,7 @@ function ddlc_start(){
 	document.getElementById("fullscreen").style.display = "inline";
 	document.getElementById("ddlc_start").style.display = "none";
 	//document.body.setAttribute("style","background-image: url('images/bg/club.png')");
-	document.title = "Doki Doki Literature Club?";
+	document.title = "Just Monika";
 	audio("sayonara","play");
 	x = setInterval(drawMenu,50);
 }
